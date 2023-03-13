@@ -1,3 +1,6 @@
+label:hover{
+    cursor: pointer;
+}
 body header{
     font-size: 0px;
 }
@@ -33,6 +36,8 @@ h1{
 }
 
 .mem__name {
+    margin:0;
+    padding: 2.1vw 0 1.5vw 0;
     display:inline-block;
     font-size: 2vw;
     font-weight: 800;
@@ -44,34 +49,40 @@ h1{
     width: 1.5vw;
     height: 1.5vw;
     display: none;
-    transform: rotate(45deg);
+    transform: rotate(135deg);
 }
 
 .mem__image {
-
-    display: none;
+    display: block;
+    transition-duration: 0.2s ;
     margin-left:auto;
     margin-right: auto;
-    width: 20vw;
-    height: 20vw;
+    width: 0vw;
+    height: 0vw;
     padding-bottom: 1vw;
 }
 
 
 .list:hover .mem__cross{
     display: inline;
+    cursor: pointer;
 }
 
 .list:hover .mem__name{
     color:#000;
+    cursor: pointer;
 }
 
 .mem:hover .mem__image{
-    display: block;
+    
+    width: 20vw;
+    height: 20vw;
+    cursor: pointer;
 }
 
 .mem:hover .mem__cross{
     transform: rotate(0deg);
+    cursor: pointer;
 }
 
 .clicking{
@@ -93,9 +104,41 @@ input[type=radio]:checked ~ .mem__cross_first {
 
 input[type=radio]:checked ~ .mem__image {
     display: block;
+    width: 20vw;
+    height: 20vw;
 }
 
 input[type=radio]:checked ~ .mem__cross {
     transform: rotate(0deg);
 }
 
+.mem__cross{
+    transition-duration: 0.5s ;
+}
+
+.mem:active .mem__name{
+    color: red;
+}
+
+
+
+
+
+@media (min-width: 320px) and (max-width:819px) { 
+    .mem__name {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 820px)  and (max-width:1919px) { 
+    .mem__name {
+        font-size: 2vw;
+    }
+}
+
+
+@media (min-width: 1920px)  { 
+    .mem__name {
+        font-size: 1vw;
+    }
+ }
