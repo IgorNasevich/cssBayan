@@ -29,8 +29,7 @@ h1{
 }
 
 .mem {
-    border-top: 1px groove;
-    
+    border-top: 1px groove;    
 }
 
 .mem__name {
@@ -58,6 +57,7 @@ h1{
     padding-bottom: 1vw;
 }
 
+
 .list:hover .mem__cross{
     display: inline;
 }
@@ -68,5 +68,34 @@ h1{
 
 .mem:hover .mem__image{
     display: block;
+}
+
+.mem:hover .mem__cross{
+    transform: rotate(0deg);
+}
+
+.clicking{
+    display:none;
+}
+
+input[type=radio]:checked ~ .mem__name {
+    color: black;
+}
+
+input[type=radio]:checked ~ .mem__image_first {
+    display: block;
+}
+
+input[type=radio]:checked ~ .mem__cross_first {
+    transform: rotate(45deg);
+}
+
+
+input[type=radio]:checked ~ .mem__image {
+    display: block;
+}
+
+input[type=radio]:checked ~ .mem__cross {
+    transform: rotate(0deg);
 }
 
