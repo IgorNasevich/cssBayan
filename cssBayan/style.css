@@ -64,6 +64,7 @@ h1{
 
 
 
+
 .clicking{
     display:none;
 }
@@ -103,24 +104,28 @@ input[type=radio]:checked ~ .mem__cross {
 
 
 
-@media (min-width: 320px) and (max-width:819px) { 
+@media (min-width: 320px) and (max-width:799px) { 
     .mem__name {
         font-size: 4vw;
+        color:#000;
     }
 }
 
-@media (min-width: 820px)  and (max-width:1919px) { 
+@media (min-width: 800px)  and (max-width:1919px) { 
     .mem__name {
         font-size: 2vw;
+        color:#000;
     }
 }
 
 
-@media (min-width: 1920px)  { 
+@media (min-width: 1919px)  { 
     .mem__name {
         font-size: 1vw;
+        
     }
  }
+
 
  @media(hover){
     .list:hover .mem__cross{
@@ -145,4 +150,7 @@ input[type=radio]:checked ~ .mem__cross {
         cursor: pointer;
     }
     
+   
+    
+
  }
